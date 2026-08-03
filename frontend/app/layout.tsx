@@ -1,10 +1,23 @@
 import type { Metadata } from "next";
+import { Plus_Jakarta_Sans, Outfit } from "next/font/google";
 import "./globals.css";
 
+const plusJakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  display: "swap",
+});
+
+const outfit = Outfit({
+  subsets: ["latin"],
+  variable: "--font-display",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
-  title: "Corporate Stays Bangalore — Accommodation Enquiry",
+  title: "CorporateStaysBangalore — Corporate Accommodation Solutions",
   description:
-    "Tell us your team's corporate accommodation needs in Bangalore and we'll get back to you within 24 hours.",
+    "We don't book rooms. We solve corporate accommodation. Tell us your requirement in under 2 minutes and receive a tailored accommodation strategy.",
 };
 
 export default function RootLayout({
@@ -13,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${plusJakarta.variable} ${outfit.variable}`}>
       <body className="font-sans antialiased">{children}</body>
     </html>
   );
