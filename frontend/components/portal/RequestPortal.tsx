@@ -96,7 +96,7 @@ export function RequestPortal() {
             setStepIndex(next);
           }
         },
-        response ? 1100 : 180
+        response ? 2000 : 200
       );
     },
     [questionId, stepIndex]
@@ -140,6 +140,7 @@ export function RequestPortal() {
                 Accommodation Consultant
               </p>
               <ConsultantNote message={consultantNote} />
+              <p className="mt-6 text-sm text-slate-400">Continuing…</p>
             </motion.div>
           )}
 
